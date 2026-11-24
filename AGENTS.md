@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- GolShop is a frontend-only prototype: products, cart and admin edits live in an in-memory React context (`src/lib/golshop-store.tsx`), so no backend is wired until the user asks for one.
+- Every screen renders inside `MobileShell` (390px mobile frame + bottom nav) so the layout stays mobile-first on any screen size.
+- Product images are SVG illustrations (`ProductArt`) driven by per-product team colors in the data, so new products need no image files.
